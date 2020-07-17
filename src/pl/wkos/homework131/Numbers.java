@@ -5,9 +5,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Numbers {
-    private List numbers = new ArrayList();
+    private List<Object> numbers = new ArrayList<>();
 
-    public void readNumbersFromConsole() {
+    public void readNumbersFromConsole() throws NoElementInCollection {
         System.out.println("Podaj dodatnie liczby w koljenych weirszach.\n" +
                 "Wprowadzenie liczy ujemnej zkończy wczytywanie");
         System.out.print("Liczba nr 1: ");
@@ -16,6 +16,8 @@ public class Numbers {
             System.out.print("Liczba nr " + i + ": ");
             i++;
         }
+        if (numbers.size() == 0)
+            throw new NoElementInCollection("Brak elementów na liście");
     }
 
     public boolean readPositiveNumberFromConsole() {
@@ -99,7 +101,7 @@ public class Numbers {
         return (Number) numbers.get(max);
     }
 
-    public List getNumbers() {
+    public List<Object> getNumbers() {
         return numbers;
     }
 }

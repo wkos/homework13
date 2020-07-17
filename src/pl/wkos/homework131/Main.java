@@ -1,14 +1,11 @@
 package pl.wkos.homework131;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Main {
     public static void main(String[] args) {
         Numbers numbers = new Numbers();
-        numbers.readNumbersFromConsole();
-        System.out.println(numbers.toString());
         try {
+            numbers.readNumbersFromConsole();
+            System.out.println(numbers.toString());
             System.out.println("Liczby w odwrotnej kolejności");
             numbers.printReverse();
             System.out.println("Suma liczb");
