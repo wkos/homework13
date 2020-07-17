@@ -37,7 +37,7 @@ public class Numbers {
                 return true;
             }
         } catch (NumberFormatException e) {
-            System.out.println("To nie jest liczba. Spróbuj jeszcze raz");
+            System.out.println("To nie jest liczba.");
         }
         return false;
     }
