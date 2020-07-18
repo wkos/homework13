@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Numbers {
-    private List<Object> numbers = new ArrayList<>();
+    private List<Number> numbers = new ArrayList<>();
 
     public void readNumbersFromConsole() throws NoElementInCollection {
         System.out.println("Podaj dodatnie liczby w koljenych weirszach.\n" +
@@ -84,10 +84,10 @@ public class Numbers {
             throw new NoElementInCollection("Brak elementów na liście");
         int min = 0;
         for (int i = 1; i < numbers.size(); i++) {
-            if (((Number) numbers.get(i)).doubleValue() < ((Number) numbers.get(min)).doubleValue())
+            if ((numbers.get(i)).doubleValue() < (numbers.get(min)).doubleValue())
                 min = i;
         }
-        return (Number) numbers.get(min);
+        return numbers.get(min);
     }
 
     public Number getMax() throws NoElementInCollection {
@@ -95,13 +95,13 @@ public class Numbers {
             throw new NoElementInCollection("Brak elementów na liście");
         int max = 0;
         for (int i = 1; i < numbers.size(); i++) {
-            if (((Number) numbers.get(i)).doubleValue() > ((Number) numbers.get(max)).doubleValue())
+            if ((numbers.get(i)).doubleValue() > (numbers.get(max)).doubleValue())
                 max = i;
         }
-        return (Number) numbers.get(max);
+        return numbers.get(max);
     }
 
-    public List<Object> getNumbers() {
+    public List<Number> getNumbers() {
         return numbers;
     }
 }
