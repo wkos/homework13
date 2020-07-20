@@ -46,8 +46,8 @@ public class Numbers {
         if (numbers.size() == 0)
             throw new NoElementInCollection("Brak elementów na liście");
         double sum = 0;
-        for (Object number : numbers) {
-            sum += ((Number) number).doubleValue();
+        for (Number number : numbers) {
+            sum += number.doubleValue();
         }
         return sum;
     }
